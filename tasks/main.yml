@@ -1,0 +1,22 @@
+---
+- name: install app-portage/layman
+  portage: package=app-portage/layman
+  tags: packages
+
+- name: copy layman.cfg
+  copy: >
+    src=layman.cfg
+    dest=/etc/layman/layman.cfg
+  tags: config
+
+- name: ensure that make.conf sources layman
+  lineinfile: >
+    dest=/etc/portage/make.conf
+    line='source /var/lib/layman/make.conf'
+  tags: config
+
+- name: install overlays
+  layman: >
+    name={{ item.name }}
+    list_url={{ item.list_url }}
+  with_items: layman_overlays

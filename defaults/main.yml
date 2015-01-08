@@ -1,0 +1,6 @@
+---
+# A list of hashes that defines the remote overlays to install.
+# Each item must define:
+#   - name: name of the overlay
+#     list_url: url of the overlay's repo definition (overlay.xml)
+layman_overlays: []

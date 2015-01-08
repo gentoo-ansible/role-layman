@@ -1,0 +1,3 @@
+---
+- name: update eix for overlays
+  command: eix-update -x gentoo

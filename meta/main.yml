@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Jakub Jirutka
+  company: CTU in Prague
+  description: Install Layman and the specified overlays.
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+    - name: Gentoo
+  categories:
+    - packaging
+    - system
+
+dependencies: []
